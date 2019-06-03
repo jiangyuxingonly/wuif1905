@@ -82,12 +82,12 @@ window.onload =function () {
 
 
     let index = 0;
-    let current = 0 ,next = 0
+    let current = 0 ,next = 0;
     let rightbtn = document.querySelector('.rightbtn');
     let leftbtn = document.querySelector('.leftbtn');
     let bannerImg = document.querySelectorAll('.con1img li');
-    let w =bannerImg[0].offsetWidth
-    let flag =true
+    let w =bannerImg[0].offsetWidth;
+    let flag =true;
     console.log(bannerImg.length);
     rightbtn.onclick = function(){
         if (!flag) {
@@ -102,6 +102,10 @@ window.onload =function () {
         animate(bannerImg[current],{left:-w})
         animate(bannerImg[next],{left:0})
         flag=true
+        Array.prototype.forEach.call(ban,function (elem) {
+            elem.style.background='fff';
+            ban[next].style.background='#6eb49c'
+        })
         current=next
     }
     leftbtn.onclick = function(){
@@ -156,27 +160,26 @@ window.onload =function () {
         }
     }
     //四个按钮的
-    let btnlist=document.querySelector('btnlist');
-    for(let i=0;i<btnlist.length;i++){
-        btnlist[i].onclick=function () {
+    for(let i=0;i<ban.length;i++){
+        ban[i].onclick=function () {
             next=i;
             if(i>current){
                 //左移
-                banner[next].style.left= w +'px';
-                animate(banner[current],{left:-w});
-                animate(banner[next],{left:0});
+                bannerImg[next].style.left= w +'px';
+                animate(bannerImg[current],{left:-w});
+                animate(bannerImg[next],{left:0});
             }else if(i<current){
                 //右
-                banner[next].style.left= -w +'px';
-                animate(banner[current],{left:w});
-                animate(banner[next],{left:0});
+                bannerImg[next].style.left= -w +'px';
+                animate(bannerImg[current],{left:w});
+                animate(bannerImg[next],{left:0});
             }else{
                 return;
             }
-            btns.forEach(function(elem){
+            Array.prototype.forEach.call(ban,function(elem){
                 elem.style.background='none';
             });
-            btns[i].style.background='#6eb49c';
+            ban[i].style.background='#6eb49c';
             current=next;
         }
     }

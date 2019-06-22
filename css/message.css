@@ -1,0 +1,241 @@
+body ,h1, h2, h3, h4, h5, h6, p, ul, ol, li, form, input, textarea, select{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    background-color: #ffe6e9;
+    font-family: 微软雅黑;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+/*默认样式*/
+.header{
+    width: 100%;
+    height: 60px;
+    background: #ffb5bd;
+}
+.headerBox{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: #ffb5bd;
+}
+.headerBox h1{
+    width: 180px;
+    height: 100%;
+    background: #ffb5bd;
+    text-align: center;
+    line-height: 60px;
+    float:left;
+}
+.headerBox .nav{
+    height: 100%;
+    background: #ffb5bd;
+    line-height: 60px;
+    float:left;
+}
+.nav li{
+    float: left;
+    margin-right: 36px;
+}
+.nav li a:hover{
+    color:mediumblue;
+}
+.headerBox .serch{
+    width: 60px;
+    height: 100%;
+    background: #ff9b1b;
+    float:right;
+}
+.background{
+    width: 1160px;
+    background: white;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+}
+.back{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 250px;
+    z-index: 99999;
+}
+.title{
+    width: 100%;
+    height: 40px;
+    color: #333333;
+    font-weight: 600;
+    line-height: 40px;
+    border-bottom: 1px solid #e4e3e3;
+    margin-bottom: 20px;
+    position: relative;
+}
+.title::after{
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    content: "";
+    background: #000;
+    left: 0;
+    bottom: -1px;
+    transition: all 0.5s ease;
+}
+.title:hover::after{
+    width: 85px;
+}
+.f-box form > ul > li{
+    width: 100%;
+    gin-bottom: 10px;
+    line-height: 28px;
+    overflow: hidden;
+}
+.headImage li{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.headImage li img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+textarea{
+    width: 99%;
+    resize: none;
+}
+.f-box form  li input[type="submit"]{
+    display: inline-block;
+    padding: 0 20px;
+    margin-right: 10px;
+    background: black;
+    color: white;
+    line-height: 28px;
+    float: right;
+    border: none;
+    border-radius: 5px
+}
+.f-box form li input[type="reset"]{
+    display: inline-block;
+    padding: 0 20px;
+    margin-right: 10px;
+    background: black;
+    color: white;
+    line-height: 28px;
+    float: right;
+    border: none;
+    border-radius: 5px;
+}
+.top{
+    width: 26px;
+    height: 26px;
+    padding: 7px;
+    background: #000000;
+    position: fixed;
+    right: 25px;
+    bottom: 50px;
+}
+.message >li{
+    width: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #999999;
+    display: flex;
+}
+
+.message .touxiang img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+    float: left;
+    display: inline-block;
+}
+.message .text{
+    display: inline-block;
+    width: 100%;
+    margin-left: 15px;
+    float: left;
+    flex: 1;
+}
+.message .text p{
+    margin-bottom: 6px;
+    overflow: hidden;
+    color: #333333;
+}
+.message .text b{
+    display: inline-block;
+    float: left;
+}
+.message .text span{
+    float: right;
+}
+.message .reply p{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background: #f9f9f9;
+}
+.message .reply p b{
+    color: red;
+}
+.message .reply{
+    padding: 10px 0;
+    border-bottom: 1px dashed #999999;
+}
+
+.footer{
+    width: 100%;
+    background: #4d4d4d;
+    border-top: #00c1de 10px solid;
+    padding: 30px 0;
+    color: #73777a;
+    font-size: 14px;
+    position: relative;
+}
+.footer .box{
+    width: 1200px;
+    margin: auto;
+}
+.wxbox{
+    float: left;
+    margin-right: 20px;
+}
+.wxbox ul{
+    float: left;
+}
+.wxbox li{
+    float: left;
+    margin: 0 10px;
+    text-align: center;
+}
+.wxbox img{
+    display: block;
+    height: 100%;
+
+}
+.endnav p{
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+.endnav b{
+    font-size: 16px;
+    color: #00c1de;
+}
+.top{
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 40%;
+    background: black;
+}

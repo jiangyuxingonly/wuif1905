@@ -183,6 +183,28 @@ window.onload =function () {
             current=next;
         }
     }
+//diary
+    let dailyLeftT = document.querySelectorAll(".lefttitle >li >a");
+
+    dailyLeftT.forEach(function (ele) {
+        ele.onclick=function () {
+            dailyLeftT.forEach(function (ele) {
+                ele.classList.remove("titlehot");
+            });
+            this.classList.add("titlehot");
+        }
+    })
+
+
+    let dailyLeftL = document.querySelectorAll(".lefttitle > li");
+    dailyLeftL.forEach(function (ele) {
+        ele.onmouseenter=function () {
+            dailyLeftL.forEach(function (ele) {
+                ele.classList.remove("hot")
+            })
+            this.classList.add("hot");
+        }
+    })
 
 
 
